@@ -1,9 +1,9 @@
-import * as reactPlugin from 'vite-plugin-react';
-import type { UserConfig } from 'vite';
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-const config: UserConfig = {
-    jsx: 'react',
-    plugins: [reactPlugin],
-};
-
-export default config;
+export default defineConfig({
+    server: {
+        port: 3000,
+    },
+    plugins: [react()],
+});

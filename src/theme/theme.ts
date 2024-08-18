@@ -1,24 +1,62 @@
 import { createTheme } from '@mui/material';
+import { colors } from './colors';
 
 export const theme = createTheme({
     palette: {
         primary: {
-            main: '#2260ff',
+            main: colors.blue,
         },
-        // secondary: {
-        //     main: '#dc004e', // Вторичный цвет
-        // },
+        secondary: {
+            main: colors.lightBlue, // Вторичный цвет
+        },
         // background: {
         //     default: '#f5f5f5', // Цвет фона приложения
         //     paper: '#ffffff', // Цвет для карточек и других элементов
         // },
     },
     typography: {
+        fontFamily: 'Montserrat',
         h1: {
-            fontFamily: 'Montserrat',
             fontSize: '42px',
             fontWeight: 100,
-            color: '#2260ff',
+            color: colors.blue,
+        },
+        h2: {
+            fontSize: '24px',
+            fontWeight: 700,
+            color: colors.blue,
+        },
+        h3: {
+            fontSize: '12px',
+            fontWeight: 600,
+            color: colors.blue,
+        },
+        body1: {
+            fontSize: '12px',
+            fontWeight: 300,
+            color: colors.black,
+        },
+    },
+    components: {
+        MuiButton: {
+            variants: [
+                {
+                    props: { variant: 'text' },
+                    style: {
+                        backgroundColor: colors.lightBlue,
+                        '&:hover': {
+                            backgroundColor: '#b5c0eb',
+                        },
+                    },
+                },
+            ],
+        },
+        MuiIconButton: {
+            styleOverrides: {
+                root: {
+                    color: colors.blue,
+                },
+            },
         },
     },
 });
