@@ -4,7 +4,7 @@ import React from 'react';
 import { mainBtnSx } from './styles';
 
 export type MainButtonProps = ButtonProps & {
-    sx: SxProps;
+    sx?: SxProps;
 };
 
 export const MainButton = observer((props: MainButtonProps) => {

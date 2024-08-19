@@ -58,5 +58,29 @@ export const theme = createTheme({
                 },
             },
         },
+        MuiInputLabel: {
+            styleOverrides: {
+                root: {
+                    display: 'none', // Скрыть label
+                },
+            },
+        },
+        MuiOutlinedInput: {
+            styleOverrides: {
+                notchedOutline: {
+                    backgroundColor: colors.backgroundBlue,
+
+                    borderRadius: '14px',
+                    borderWidth: 0,
+                    zIndex: -2,
+                },
+                input: {
+                    color: colors.blue,
+                    fontSize: '16px',
+                    fontWeight: 500,
+                    borderRadius: '14px',
+                },
+            },
+        },
     },
 });

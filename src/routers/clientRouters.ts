@@ -3,6 +3,7 @@ export enum ClientRouters {
     login = '/auth/login',
     registration = '/auth/registration',
     logout = '/logout',
+    forgetPassword = 'forgetPassword',
 
     home = '/home',
 
