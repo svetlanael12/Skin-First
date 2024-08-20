@@ -79,6 +79,26 @@ export const theme = createTheme({
                     fontSize: '16px',
                     fontWeight: 500,
                     borderRadius: '14px',
+                    '&:-webkit-autofill': {
+                        // webkitBo
+                        boxShadow: `0 0 0 30px ${colors.backgroundBlue} inset`,
+                        textFillColor: colors.blue,
+                        height: 'auto',
+                        borderRadius: '14px',
+                        // -webkit-box-shadow: 0 0 0 30px white inset; /* Измените 'white' на нужный вам цвет фона */
+                        // box-shadow: 0 0 0 30px white inset; /* Измените 'white' на нужный вам цвет фона */
+                        // -webkit-text-fill-color: black; /* Установите цвет текста, который будет виден на фоне */
+                    },
+
+                    // &:-webkit-autofill:focus {
+                    //     -webkit-box-shadow: 0 0 0 30px white inset; /* Имитация неактивного состояния при фокусе */
+                    //     box-shadow: 0 0 0 30px white inset; /* Имитация неактивного состояния при фокусе */
+                    // }
+
+                    // &:-webkit-autofill:hover {
+                    //     -webkit-box-shadow: 0 0 0 30px white inset; /* Остается стиль, когда поле в состоянии наведения */
+                    //     box-shadow: 0 0 0 30px white inset; /* Остается стиль, когда поле в состоянии наведения */
+                    // }
                 },
             },
         },

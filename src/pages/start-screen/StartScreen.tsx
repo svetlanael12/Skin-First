@@ -2,7 +2,7 @@ import { observer } from 'mobx-react-lite';
 import React from 'react';
 import { Logo } from '../../assets/logo';
 import { Box, Typography } from '@mui/material';
-import { startScreenBodySx, startScreenTitleSx, startScreenWrapperSx } from './styles';
+import { startScreenBodySx, startScreenButtonsWrapperSx, startScreenTitleSx, startScreenWrapperSx } from './styles';
 import { MainButton } from '../../components/buttons/main-button/MainButton';
 import { useNavigate } from 'react-router-dom';
 import { ClientRouters } from '../../routers/clientRouters';
@@ -30,12 +30,14 @@ export const StartScreen = observer(() => {
                 помощь. Вводите симптомы, выбирайте специалиста и записывайтесь на прием всего в несколько кликов!
             </Typography>
 
-            <MainButton variant="contained" sx={{ mt: 2 }} onClick={onClickLogin}>
-                Войти
-            </MainButton>
-            <MainButton sx={{ mt: 2 }} onClick={onClickRegistartion}>
-                Зарегистироваться
-            </MainButton>
+            <Box sx={startScreenButtonsWrapperSx}>
+                <MainButton variant="contained" sx={{ mt: 2 }} onClick={onClickLogin}>
+                    Войти
+                </MainButton>
+                <MainButton sx={{ mt: 2 }} onClick={onClickRegistartion}>
+                    Зарегистироваться
+                </MainButton>
+            </Box>
         </Box>
     );
 });

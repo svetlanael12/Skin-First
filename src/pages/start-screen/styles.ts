@@ -7,6 +7,8 @@ export const startScreenWrapperSx: SxProps = {
     alignItems: 'center',
 
     height: '100vh',
+    maxWidth: '600px',
+    m: 'auto',
 };
 
 export const startScreenTitleSx: SxProps = {
@@ -16,6 +18,11 @@ export const startScreenTitleSx: SxProps = {
 export const startScreenBodySx: SxProps = {
     mt: 5,
     textAlign: 'center',
+};
 
-    maxWidth: '600px',
+export const startScreenButtonsWrapperSx: SxProps = {
+    width: '100%',
+    '@media (min-width:800px)': {
+        maxWidth: '300px',
+    },
 };

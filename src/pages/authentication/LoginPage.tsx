@@ -32,7 +32,7 @@ export const LoginPage = observer(() => {
 
     return (
         <WrapperWithBackBtn title="Войти" onClickBack={onClickBack}>
-            <Box sx={{ pt: '15vh' }}>
+            <Box sx={{ pt: '15vh', maxWidth: '600px', margin: 'auto' }}>
                 <Formik
                     initialValues={initialValues}
                     validationSchema={validationSchema}
