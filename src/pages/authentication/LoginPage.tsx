@@ -1,14 +1,17 @@
+import { Form, Formik } from 'formik';
 import { observer } from 'mobx-react-lite';
 import React from 'react';
-import { WrapperWithBackBtn } from '../../components/wrappers/WrapperWithBackBtn';
 import { useNavigate } from 'react-router-dom';
-import { ClientRouters } from '../../routers/clientRouters';
-import { Form, Formik } from 'formik';
-import { TextFieldWithFormik } from '../../components/inputs/textfield/TextFieldWithFormik';
 import { object, string } from 'yup';
-import { MainButton } from '../../components/buttons/main-button/MainButton';
+
 import { Box, Typography } from '@mui/material';
+
+import { MainButton } from '../../components/buttons/main-button/MainButton';
+import { TextFieldWithFormik } from '../../components/inputs/textfield/TextFieldWithFormik';
 import { MainLink } from '../../components/link/MainLink';
+import { WrapperWithBackBtn } from '../../components/wrappers/WrapperWithBackBtn';
+import { useRootStore } from '../../hooks/context/useRootStore';
+import { ClientRouters } from '../../routers/clientRouters';
 import { linkForgetPasswordSx, linkRegistrationSx } from '../../styles/loginPage';
 
 const initialValues = {
@@ -25,6 +28,7 @@ const validationSchema = object({
 
 export const LoginPage = observer(() => {
     const navigate = useNavigate();
+    const { addNotification } = useRootStore().notificationStore;
 
     const onClickBack = (): void => {
         navigate(ClientRouters.startScreen);
@@ -37,7 +41,7 @@ export const LoginPage = observer(() => {
                     initialValues={initialValues}
                     validationSchema={validationSchema}
                     validateOnChange
-                    onSubmit={(values) => console.log(values)}
+                    onSubmit={(values) => {}}
                 >
                     <Form>
                         <TextFieldWithFormik name="email" placeholder="Введите email *" />

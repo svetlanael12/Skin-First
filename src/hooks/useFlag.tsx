@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+export type UseFlagType = [boolean, () => void, () => void, React.Dispatch<React.SetStateAction<boolean>>];
+
 /***
  * Хук для управления состоянием булевых флагов. Он позволяет установить флаг в `true`, `false` или оставить его в исходном значении.
  * @param initialValue {boolean} - начальное значение (по умолчание false)
@@ -9,7 +11,7 @@ import { useState } from 'react';
  * setFlagFalse - сеттер в значение false
  * setFlag - сеттер
  */
-export const useFlag = (initialValue = false) => {
+export const useFlag = (initialValue = false): UseFlagType => {
     const [flag, setFlag] = useState(initialValue);
 
     const setFlagTrue = (): void => {
